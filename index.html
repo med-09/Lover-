@@ -1,1 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
 
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff4b91,#ff9ecf,#ffd6e7);
+overflow-x:hidden;
+color:white;
+text-align:center;
+}
+
+.container{
+padding:40px 20px;
+max-width:900px;
+margin:auto;
+}
+
+h1{
+font-size:3rem;
+margin-bottom:20px;
+text-shadow:0 0 20px white;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{opacity:.8;}
+to{opacity:1;text-shadow:0 0 30px white;}
+}
+
+p{
+font-size:1.2rem;
+line-height:1.9;
+background:rgba(255,255,255,.15);
+padding:25px;
+border-radius:20px;
+backdrop-filter:blur(8px);
+}
+
+button{
+margin-top:35px;
+padding:15px 40px;
+font-size:20px;
+border:none;
+border-radius:40px;
+background:white;
+color:#ff2f7b;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+#message{
+display:none;
+margin-top:30px;
+font-size:22px;
+font-weight:bold;
+animation:fade 2s;
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+.heart{
+position:fixed;
+color:red;
+font-size:20px;
+animation:fall linear infinite;
+top:-10px;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>❤️ FOR HER NAME ❤️</h1>
+
+<p>
+
+From the moment you came into my life, everything became brighter.
+
+I don't know if words will ever be enough to explain how much you truly mean to me, but I'll still spend every day trying.
+
+You are the reason I smile for no reason, the reason I wait for every notification, and the reason my heart beats a little faster whenever I think about you.
+
+Every conversation with you feels special.
+
+Every laugh we share becomes one of my favorite memories.
+
+Every picture of you makes my day better, and every little thing about you makes me admire you even more.
+
+Sometimes I catch myself smiling while thinking about you, and I realize how lucky I am just to know someone as amazing as you.
+
+You are beautiful in every possible way.
+
+Not only because of your smile, your eyes, or your face...
+
+But because of your heart.
+
+Your kindness.
+
+Your personality.
+
+The way you make everything feel calm without even trying.
+
+You became someone incredibly important to me.
+
+No matter how busy life gets, no matter how difficult some days become, you'll always have a special place inside my heart.
+
+I hope one day I can make you as happy as you make me.
+
+I hope I can be the reason you smile the same way you're the reason I smile.
+
+Thank you for existing.
+
+Thank you for every moment, every message, every laugh, and every memory.
+
+You are one of the most precious people I've ever met.
+
+If I had one wish...
+
+It would simply be to keep you in my life for a very, very long time.
+
+No matter where life takes us, I promise you'll always have someone cheering for you, believing in you, and caring about you with all his heart.
+
+And if one day you ever doubt how much you mean to someone...
+
+Remember this page.
+
+Because every single word here came straight from my heart.
+
+I love you more than words could ever describe.
+
+Forever. ❤️
+
+</p>
+
+<button onclick="showLove()">Open My Heart ❤️</button>
+
+<div id="message">
+❤️ YOU WILL ALWAYS BE MY FAVORITE PERSON ❤️
+</div>
+
+</div>
+
+<script>
+
+function showLove(){
+document.getElementById("message").style.display="block";
+}
+
+function hearts(){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(15+Math.random()*35)+"px";
+h.style.animationDuration=(3+Math.random()*5)+"s";
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},8000);
+}
+
+setInterval(hearts,250);
+
+</script>
+
+</body>
+</html>
