@@ -1,171 +1,178 @@
-// ===== SIDEBAR =====
+// ==========================
+// PAGE NAVIGATION
+// ==========================
 
-const menus = document.querySelectorAll(".menu");
+const menuButtons = document.querySelectorAll(".menu-btn");
 const pages = document.querySelectorAll(".page");
 
-menus.forEach((menu,index)=>{
+menuButtons.forEach(button => {
 
-menu.addEventListener("click",()=>{
+button.addEventListener("click", () => {
 
-menus.forEach(m=>m.classList.remove("active"));
-pages.forEach(p=>p.classList.remove("active"));
+menuButtons.forEach(btn => btn.classList.remove("active"));
+button.classList.add("active");
 
-menu.classList.add("active");
-pages[index].classList.add("active");
+const target = button.dataset.page;
 
-});
+pages.forEach(page => {
 
-});
+page.classList.remove("active");
 
-// ===== START BUTTON =====
+if(page.id === target){
 
-const start=document.getElementById("startButton");
-
-if(start){
-
-start.onclick=()=>{
-
-document.querySelectorAll(".menu")[1].click();
-
-};
+page.classList.add("active");
 
 }
 
-// ===== HEART GAME =====
+});
 
-const game=document.querySelector(".game-area");
-const scoreText=document.querySelector(".score");
+});
 
-let score=0;
+});
 
-if(game){
+// ==========================
+// START BUTTON
+// ==========================
+
+const startButton = document.getElementById("startButton");
+
+if(startButton){
+
+startButton.addEventListener("click",()=>{
+
+document.querySelector('[data-page="game"]').click();
+
+});
+
+}
+
+// ==========================
+// HEART GAME
+// ==========================
+
+const gameArea = document.querySelector(".game-area");
+const scoreText = document.getElementById("score");
+
+let score = 0;
 
 function createHeart(){
 
-const heart=document.createElement("div");
+if(!gameArea) return;
 
-heart.className="heart";
+const heart = document.createElement("div");
 
-heart.innerHTML="❤️";
+heart.className = "heart";
 
-heart.style.left=Math.random()*90+"%";
+heart.innerHTML = "💖";
 
-heart.style.top="-60px";
+heart.style.left = Math.random()*90+"%";
 
-heart.onclick=()=>{
+heart.style.top = "-40px";
+
+gameArea.appendChild(heart);
+
+heart.addEventListener("click",()=>{
 
 score++;
 
-if(scoreText){
-
-scoreText.innerHTML="Score : "+score;
-
-}
+scoreText.textContent = score;
 
 heart.remove();
-
-if(score==20){
-
-alert("💖 Congratulations Arwa! You collected all my love! 💖");
-
-}
-
-};
-
-game.appendChild(heart);
-
-setTimeout(()=>{
-
-heart.remove();
-
-},6000);
-
-}
-
-setInterval(createHeart,800);
-
-}
-
-// ===== LOVE QUIZ =====
-
-const answers=document.querySelectorAll(".answer");
-
-answers.forEach(btn=>{
-
-btn.onclick=()=>{
-
-const result=document.querySelector(".result");
-
-if(!result) return;
-
-if(btn.dataset.correct=="yes"){
-
-result.innerHTML="❤️ Correct! My heart always belongs to Arwa ❤️";
-
-}else{
-
-result.innerHTML="🥺 Wrong answer... Try again my princess.";
-
-}
-
-};
 
 });
 
-// ===== SURPRISE =====
+let topPos = -40;
 
-const surprise=document.getElementById("surpriseButton");
+const fall = setInterval(()=>{
 
-if(surprise){
+topPos += 3;
 
-surprise.onclick=()=>{
+heart.style.top = topPos+"px";
 
-document.getElementById("gift").style.display="block";
+if(topPos>gameArea.offsetHeight){
 
-surprise.style.display="none";
+heart.remove();
 
-};
-
-}
-
-// ===== FLOATING HEARTS =====
-
-function floatingHeart(){
-
-const h=document.createElement("div");
-
-h.className="floating-heart";
-
-h.innerHTML="❤️";
-
-h.style.left=Math.random()*100+"vw";
-
-h.style.fontSize=(20+Math.random()*25)+"px";
-
-h.style.animationDuration=(5+Math.random()*5)+"s";
-
-document.body.appendChild(h);
-
-setTimeout(()=>{
-
-h.remove();
-
-},10000);
+clearInterval(fall);
 
 }
 
-setInterval(floatingHeart,700);
+},20);
 
-// ===== TITLE =====
+}
 
-let title=true;
+if(gameArea){
+
+setInterval(createHeart,900);
+
+}
+
+// ==========================
+// SURPRISE BUTTON
+// ==========================
+
+const surpriseButton=document.getElementById("surpriseButton");
+const gift=document.getElementById("gift");
+
+if(surpriseButton){
+
+surpriseButton.addEventListener("click",()=>{
+
+gift.style.display="block";
+
+gift.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+surpriseButton.style.display="none";
+
+});
+
+}
+
+// ==========================
+// FLOATING HEARTS
+// ==========================
+
+const bg=document.querySelector(".background-hearts");
+
+if(bg){
 
 setInterval(()=>{
 
-document.title=title
-?"❤️ For Arwa ❤️"
-:"💖 I Love You Arwa 💖";
+const heart=document.createElement("span");
 
-title=!title;
+heart.innerHTML=["💖","💕","💗","💓","🌸"][Math.floor(Math.random()*5)];
 
-},2000);
+heart.style.position="fixed";
+heart.style.left=Math.random()*100+"vw";
+heart.style.top="100vh";
+heart.style.fontSize=(20+Math.random()*20)+"px";
+heart.style.pointerEvents="none";
+heart.style.zIndex="-1";
+heart.style.opacity=".7";
+
+document.body.appendChild(heart);
+
+let y=100;
+
+const move=setInterval(()=>{
+
+y-=1;
+
+heart.style.top=y+"vh";
+
+if(y<-10){
+
+heart.remove();
+
+clearInterval(move);
+
+}
+
+},30);
+
+},700);
+  }
