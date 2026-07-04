@@ -3,193 +3,238 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Love ❤️</title>
+<title>For Arwa ❤️</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-body{
-background:linear-gradient(135deg,#ff4b91,#ff9ecf,#ffd6e7);
-overflow-x:hidden;
-color:white;
-text-align:center;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
-.container{
-padding:40px 20px;
-max-width:900px;
-margin:auto;
-}
+<link rel="stylesheet" href="style.css">
 
-h1{
-font-size:3rem;
-margin-bottom:20px;
-text-shadow:0 0 20px white;
-animation:glow 2s infinite alternate;
-}
+<script src="https://kit.fontawesome.com/6d8b6a0d8d.js" crossorigin="anonymous"></script>
 
-@keyframes glow{
-from{opacity:.8;}
-to{opacity:1;text-shadow:0 0 30px white;}
-}
-
-p{
-font-size:1.2rem;
-line-height:1.9;
-background:rgba(255,255,255,.15);
-padding:25px;
-border-radius:20px;
-backdrop-filter:blur(8px);
-}
-
-button{
-margin-top:35px;
-padding:15px 40px;
-font-size:20px;
-border:none;
-border-radius:40px;
-background:white;
-color:#ff2f7b;
-font-weight:bold;
-cursor:pointer;
-transition:.3s;
-}
-
-button:hover{
-transform:scale(1.1);
-}
-
-#message{
-display:none;
-margin-top:30px;
-font-size:22px;
-font-weight:bold;
-animation:fade 2s;
-}
-
-@keyframes fade{
-from{opacity:0;}
-to{opacity:1;}
-}
-
-.heart{
-position:fixed;
-color:red;
-font-size:20px;
-animation:fall linear infinite;
-top:-10px;
-}
-
-@keyframes fall{
-to{
-transform:translateY(110vh);
-}
-}
-</style>
 </head>
 
 <body>
 
-<div class="container">
+<div id="hearts"></div>
 
-<h1>❤️ FOR HER NAME ❤️</h1>
+<div class="sidebar">
 
-<p>
+<div class="logo">
+❤️
+<h2>Arwa</h2>
+</div>
 
-From the moment you came into my life, everything became brighter.
+<button class="menu active" data-page="home">
+<i class="fas fa-house"></i>
+<span>Home</span>
+</button>
 
-I don't know if words will ever be enough to explain how much you truly mean to me, but I'll still spend every day trying.
+<button class="menu" data-page="letter">
+<i class="fas fa-envelope"></i>
+<span>Love Letter</span>
+</button>
 
-You are the reason I smile for no reason, the reason I wait for every notification, and the reason my heart beats a little faster whenever I think about you.
+<button class="menu" data-page="gallery">
+<i class="fas fa-image"></i>
+<span>Gallery</span>
+</button>
 
-Every conversation with you feels special.
+<button class="menu" data-page="game">
+<i class="fas fa-heart"></i>
+<span>Catch Hearts</span>
+</button>
 
-Every laugh we share becomes one of my favorite memories.
+<button class="menu" data-page="quiz">
+<i class="fas fa-gamepad"></i>
+<span>Love Quiz</span>
+</button>
 
-Every picture of you makes my day better, and every little thing about you makes me admire you even more.
+<button class="menu" data-page="surprise">
+<i class="fas fa-gift"></i>
+<span>Surprise</span>
+</button>
 
-Sometimes I catch myself smiling while thinking about you, and I realize how lucky I am just to know someone as amazing as you.
+</div>
 
-You are beautiful in every possible way.
+<div class="main">
 
-Not only because of your smile, your eyes, or your face...
+<section id="home" class="page active">
 
-But because of your heart.
+<h1>For My Beautiful Arwa ❤️</h1>
 
-Your kindness.
+<p class="subtitle">
 
-Your personality.
-
-The way you make everything feel calm without even trying.
-
-You became someone incredibly important to me.
-
-No matter how busy life gets, no matter how difficult some days become, you'll always have a special place inside my heart.
-
-I hope one day I can make you as happy as you make me.
-
-I hope I can be the reason you smile the same way you're the reason I smile.
-
-Thank you for existing.
-
-Thank you for every moment, every message, every laugh, and every memory.
-
-You are one of the most precious people I've ever met.
-
-If I had one wish...
-
-It would simply be to keep you in my life for a very, very long time.
-
-No matter where life takes us, I promise you'll always have someone cheering for you, believing in you, and caring about you with all his heart.
-
-And if one day you ever doubt how much you mean to someone...
-
-Remember this page.
-
-Because every single word here came straight from my heart.
-
-I love you more than words could ever describe.
-
-Forever. ❤️
+Every click on this little website hides another piece of my heart.
 
 </p>
 
-<button onclick="showLove()">Open My Heart ❤️</button>
+<button id="startButton">
+Explore My Heart ❤️
+</button>
 
-<div id="message">
-❤️ YOU WILL ALWAYS BE MY FAVORITE PERSON ❤️
+</section>
+
+<section id="letter" class="page">
+
+<h1>My Letter To You 💌</h1>
+
+<div class="card">
+
+<p>
+
+Dear Arwa,
+
+Sometimes I wonder how someone can make another person smile without even trying.
+
+Then I think about you.
+
+You became one of the brightest parts of my life, and every conversation with you leaves me happier than before.
+
+You have the kind of smile that makes bad days disappear, the kind of eyes that people could admire forever, and a heart that's even more beautiful than your appearance.
+
+This website isn't something expensive.
+
+It won't buy flowers.
+
+It won't replace a real hug.
+
+But every line here was written because you deserve something unique.
+
+Every animation, every heart, every surprise...
+
+was made while thinking about you.
+
+I hope one day you'll remember this little page and smile, knowing that someone cared enough to create it just for you.
+
+No matter what happens in life, I hope you never forget how amazing you are.
+
+Keep smiling.
+
+Keep being yourself.
+
+Because that's the person I admire the most.
+
+With all my heart,
+
+❤️
+
+</p>
+
+</div>
+
+</section>
+
+<section id="gallery" class="page">
+
+<h1>Our Memories 📸</h1>
+
+<div class="gallery">
+
+<div class="photo">
+<img src="images/photo1.jpg">
+</div>
+
+<div class="photo">
+<img src="images/photo2.jpg">
+</div>
+
+<div class="photo">
+<img src="images/photo3.jpg">
 </div>
 
 </div>
 
-<script>
+<p class="hint">
 
-function showLove(){
-document.getElementById("message").style.display="block";
-}
+Replace these images later with your favorite pictures ❤️
 
-function hearts(){
-let h=document.createElement("div");
-h.className="heart";
-h.innerHTML="❤️";
-h.style.left=Math.random()*100+"vw";
-h.style.fontSize=(15+Math.random()*35)+"px";
-h.style.animationDuration=(3+Math.random()*5)+"s";
-document.body.appendChild(h);
+</p>
 
-setTimeout(()=>{
-h.remove();
-},8000);
-}
+</section>
 
-setInterval(hearts,250);
+<section id="game" class="page">
 
-</script>
+<h1>Catch My Heart ❤️</h1>
+
+<p>
+
+Tap every falling heart!
+
+</p>
+
+<h2>
+
+Score :
+<span id="score">0</span>
+
+</h2>
+
+<div id="gameArea"></div>
+
+</section>
+
+<section id="quiz" class="page">
+
+<h1>Little Quiz 💖</h1>
+
+<div class="quizCard">
+
+<h2>
+
+Who is the prettiest girl?
+
+</h2>
+
+<button class="answer">
+Arwa ❤️
+</button>
+
+<button class="answer">
+Nobody
+</button>
+
+<button class="answer">
+Everyone
+</button>
+
+<p id="quizResult"></p>
+
+</div>
+
+</section>
+
+<section id="surprise" class="page">
+
+<h1>One Last Surprise 🎁</h1>
+
+<button id="giftButton">
+
+Open Gift ❤️
+
+</button>
+
+<div id="giftMessage">
+
+<h2>
+
+I don't need a special day to remind you how much you mean to me.
+
+Thank you for simply existing.
+
+❤️
+
+</h2>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
