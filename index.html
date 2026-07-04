@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -10,260 +11,314 @@
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div id="hearts"></div>
+<div class="background-hearts"></div>
+
+<div class="container">
 
 <!-- SIDEBAR -->
 
-<div class="sidebar">
+<nav class="sidebar">
 
-<div class="logo">
-<h2>Arwa ❤️</h2>
-<p>Made With Love</p>
-</div>
+<h2>💖 Arwa</h2>
 
-<button class="menu active">🏠 Home</button>
-<button class="menu">❤️ Heart Game</button>
-<button class="menu">💌 Love Letter</button>
-<button class="menu">📸 Memories</button>
-<button class="menu">❓ Quiz</button>
-<button class="menu">🎁 Surprise</button>
+<button class="menu-btn active" data-page="home">
+🏠 Home
+</button>
 
-</div>
+<button class="menu-btn" data-page="game">
+🎮 Mini Game
+</button>
 
-<!-- MAIN -->
+<button class="menu-btn" data-page="letter">
+💌 Letter
+</button>
 
-<div class="main">
+<button class="menu-btn" data-page="reasons">
+🌸 Why I Like You
+</button>
+
+<button class="menu-btn" data-page="kitty">
+🎀 Hello Kitty
+</button>
+
+<button class="menu-btn" data-page="surprise">
+🎁 Final Surprise
+</button>
+
+</nav>
+
+<!-- CONTENT -->
+
+<main class="content">
 
 <!-- HOME -->
 
-<section class="page active">
+<section id="home" class="page active">
 
-<h1 class="glow">
-Welcome Arwa ❤️
+<h1 class="title">
+For Arwa ❤️
 </h1>
 
 <p class="subtitle">
 
-This little website isn't just made with HTML and CSS...
-It is made from every smile you've ever given me,
-every moment I thought about you,
-and every feeling I never knew how to put into words.
+Welcome to a little world I created especially for you.
 
-I wanted to create something special,
-something you could always come back to whenever you wanted to smile.
+Every page has something different waiting for you.
 
-So take your time,
-explore every page,
-play every game,
-read every word,
-because every single part of this website was created only for you.
+Take your time...
+
+Smile...
+
+And enjoy every surprise. 🌸
 
 </p>
 
-<button id="startButton">
-Begin Our Journey ❤️
+<button id="startButton" class="start-btn">
+
+✨ Start The Journey ✨
+
 </button>
 
 </section>
 
-<!-- HEART GAME -->
+<!-- MINI GAME -->
 
-<section class="page">
+<section id="game" class="page">
 
-<h1>Heart Game ❤️</h1>
+<h1>🎮 Catch The Hearts</h1>
 
-<p class="subtitle">
+<p>
 
-Catch every heart you can.
-Every heart represents one reason why you make my world brighter.
+Catch every heart you can before the timer ends!
 
-Can you collect all of my love?
-
-</p>
-
-<p class="score">
-Score : 0
 </p>
 
 <div class="game-area">
 
+<div class="score">
+
+Score:
+<span id="score">
+0
+</span>
+
 </div>
-
-</section>
-
-<!-- LOVE LETTER -->
-
-<section class="page">
-
-<h1>My Letter 💌</h1>
-
-<div class="letter">
-
-<h2>Dear Arwa...</h2>
-
-<p>
-
-If someone asked me to describe you,
-I wouldn't start with your beauty,
-even though you're beautiful.
-
-I'd start with the peace I feel whenever I think about you.
-
-You have this incredible way of making ordinary days feel special.
-
-Sometimes I catch myself smiling for absolutely no reason...
-then I realize it's because you crossed my mind again.
-
-I don't know what tomorrow brings.
-
-I don't know where life will take us.
-
-But I do know this...
-
-Meeting someone like you is something I'll always be grateful for.
-
-No matter what happens,
-I hope this little website reminds you that somewhere in this world,
-there is someone who truly appreciates you,
-cares about you,
-and wishes nothing but happiness for you.
-
-❤️
-
-</p>
 
 </div>
 
 </section>
-  <!-- LETTER PAGE -->
-<section class="page">
+<!-- LETTER PAGE -->
+
+<section id="letter" class="page">
 
 <h1>💌 A Letter For Arwa</h1>
 
 <div class="card">
+
 <p>
+
 Dear Arwa,
 
-I don't know if words are enough to explain how much I appreciate you.
-You have a way of making my days brighter without even trying.
-Every notification from you makes me smile, every conversation stays in my mind longer than you probably realize.
+I honestly don't know where to start.
 
-You're kind, beautiful, funny, and honestly one of the most amazing people I've ever met.
-I hope this little website reminds you how special you are.
+Creating this little website made me realize how difficult it is to describe someone who means so much.
 
-Thank you for simply being yourself.
+You have a smile that brightens every conversation and a kindness that's impossible to ignore.
+
+Even on ordinary days, talking to you makes them feel special.
+
+I hope this tiny surprise reminds you that you're appreciated more than you know.
+
+Never stop being the amazing person you are.
 
 ❤️
+
 </p>
+
 </div>
 
 </section>
 
 <!-- REASONS PAGE -->
-<section class="page">
 
-<h1>🌸 Reasons I Like You</h1>
+<section id="reasons" class="page">
 
-<div class="card">
-<ul class="reason-list">
-<li>💖 Your beautiful smile.</li>
-<li>✨ Your cute personality.</li>
-<li>🌸 Your kindness.</li>
-<li>😊 The way you make me happy.</li>
-<li>🌹 Your gorgeous eyes.</li>
-<li>💕 Talking with you always makes my day better.</li>
-<li>🎀 You're simply unforgettable.</li>
-</ul>
+<h1>🌸 Reasons Why I Like You</h1>
+
+<div class="reasons-grid">
+
+<div class="reason-card">
+💖<br>
+Your beautiful smile.
+</div>
+
+<div class="reason-card">
+✨<br>
+Your cute personality.
+</div>
+
+<div class="reason-card">
+🌷<br>
+Your kindness.
+</div>
+
+<div class="reason-card">
+😊<br>
+You always make me smile.
+</div>
+
+<div class="reason-card">
+👀<br>
+Your gorgeous eyes.
+</div>
+
+<div class="reason-card">
+🎀<br>
+You're simply unforgettable.
+</div>
+
+<div class="reason-card">
+💕<br>
+Talking with you is my favorite part of the day.
+</div>
+
+<div class="reason-card">
+❤️<br>
+Because you're Arwa.
+</div>
+
 </div>
 
 </section>
 
 <!-- HELLO KITTY PAGE -->
-<section class="page">
 
-<h1>🎀 Hello Kitty Corner 🎀</h1>
+<section id="kitty" class="page">
+
+<h1>🎀 Hello Kitty World 🎀</h1>
 
 <p class="subtitle">
-Because you deserve something as cute as you are.
+
+A cute page for the cutest girl.
+
 </p>
 
 <div class="kitty-container">
 
-<img class="kitty kitty1" src="https://i.imgur.com/7J5qK5Q.png">
+<img src="hello1.png" class="kitty kitty1">
 
-<img class="kitty kitty2" src="https://i.imgur.com/7J5qK5Q.png">
+<img src="hello2.png" class="kitty kitty2">
 
-<img class="kitty kitty3" src="https://i.imgur.com/7J5qK5Q.png">
+<img src="hello3.png" class="kitty kitty3">
 
-<img class="kitty kitty4" src="https://i.imgur.com/7J5qK5Q.png">
+<img src="hello4.png" class="kitty kitty4">
 
-<img class="kitty kitty5" src="https://i.imgur.com/7J5qK5Q.png">
+<img src="hello5.png" class="kitty kitty5">
 
 </div>
 
 <div class="card">
+
 <h2>💕 Little Message 💕</h2>
 
 <p>
+
 Hello Kitty is adorable...
 
-But honestly...
+But she still isn't as adorable as you.
 
-She still isn't as cute as you, Arwa. ❤️
+I hope every time you visit this page it puts a smile on your face.
 
-I hope this little page makes you smile every single time you visit it.
+You deserve happiness every single day.
+
+❤️
+
 </p>
 
 </div>
 
 </section>
+<!-- FINAL SURPRISE PAGE -->
 
-<!-- FINAL SURPRISE -->
-<section class="page">
+<section id="surprise" class="page">
 
-<h1>🎁 Final Surprise</h1>
+<h1>🎁 Final Surprise 🎁</h1>
 
 <div class="card">
 
+<h2>You made it to the end ❤️</h2>
+
 <p>
-If you've reached this page...
 
-It means you've seen every little thing I prepared just for you.
+If you're reading this...
 
-Thank you for taking the time to explore my little world.
+It means you've explored every little page I made just for you.
 
-Always remember...
+I didn't create this because I had to.
 
-You're incredibly special.
+I created it because you're someone special to me.
 
-❤️
+I wanted to make something different...
+Something that could make you smile even for a few minutes.
+
+I hope every click,
+every animation,
+every little heart,
+
+made you feel just a little happier.
+
+Because seeing you happy is honestly enough for me.
+
+🌸❤️
+
 </p>
 
-<button id="surpriseButton">
-Click Me 💖
+<button id="surpriseButton" class="gift-btn">
+
+🎀 Open Your Gift 🎀
+
 </button>
 
-<div id="gift" style="display:none;margin-top:30px;">
+<div id="gift" class="gift-box">
 
-<h2>❤️ I Like You So Much, Arwa ❤️</h2>
+<h2>❤️ For You, Arwa ❤️</h2>
 
 <p>
-I hope one day we create beautiful memories together.
 
-Until then...
+No matter what happens...
 
-Keep smiling, because your smile makes the world a little brighter.
+Never forget how amazing you are.
 
-🌸
+Stay kind.
+
+Stay beautiful.
+
+Stay yourself.
+
+Because that's exactly the person I admire.
+
+Thank you for being part of my life.
+
+I hope this won't be the last surprise I make for you.
+
+💖🌸
+
 </p>
+
+<h1 style="margin-top:25px;font-size:40px;">
+
+I Like You ❤️
+
+</h1>
 
 </div>
 
@@ -276,5 +331,5 @@ Keep smiling, because your smile makes the world a little brighter.
 <script src="script.js"></script>
 
 </body>
-</html>
 
+</html>
